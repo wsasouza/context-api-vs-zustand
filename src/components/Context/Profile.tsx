@@ -1,25 +1,22 @@
-import { useUserContext } from "../../stores/useContext";
+import { useContext } from 'react'
+import { UserContext } from '../../Store/UserContext'
 
-export default function Profile() {
-  const {
-    user: { fullName, email },
-    updateUser,
-  } = useUserContext();
-
+export const Profile = () => {
+  const context = useContext(UserContext)
   return (
     <div>
       <input
         type="text"
-        value={fullName}
-        placeholder="Full Name"
-        onChange={(e) => updateUser({ fullName: e.target.value })}
+        placeholder="Nome completo"
+        value={context?.user.fullname}
+        onChange={(ev) => context?.updateUser({ fullname: ev.target.value })}
       />
       <input
-        type="text"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => updateUser({ email: e.target.value })}
+        type="email"
+        placeholder="E-mail"
+        value={context?.user.email}
+        onChange={(ev) => context?.updateUser({ email: ev.target.value })}
       />
     </div>
-  );
+  )
 }

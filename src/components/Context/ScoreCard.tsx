@@ -1,20 +1,18 @@
-import React from "react";
-import { useUserContext } from "../../stores/useContext";
+import { useContext } from 'react'
+import { UserContext } from '../../Store/UserContext'
 
-export default function ScoreCard() {
-  const {
-    user: { score },
-    updateUser,
-  } = useUserContext();
-
+export const ScoreCard = () => {
+  const context = useContext(UserContext)
   return (
     <div>
       <input
         type="number"
-        value={score}
-        onChange={(e) => updateUser({ score: parseInt(e.target.value) })}
+        placeholder="Score"
+        value={context?.user.score}
+        onChange={(ev) =>
+          context?.updateUser({ score: parseInt(ev.target.value) })
+        }
       />
-      <p>ScoreCard: {score}</p>
     </div>
-  );
+  )
 }

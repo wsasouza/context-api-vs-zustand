@@ -1,16 +1,17 @@
-import "./App.css";
-import Profile from "./components/Profile";
-import ScoreCard from "./components/ScoreCard";
+import './App.css'
+import { Profile } from './components/Context/Profile'
+import { ScoreCard } from './components/Context/ScoreCard'
 
 function App() {
   return (
     <div className="App">
-      <h1>Zustand</h1>
+      <h2>Zustand</h2>
+
+      <h2>Context API</h2>
       <Profile />
       <ScoreCard />
-      <h1>Context</h1>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
