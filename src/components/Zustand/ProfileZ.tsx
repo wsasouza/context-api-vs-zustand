@@ -10,6 +10,7 @@ export const ProfileZ = () => {
       <input
         type="text"
         placeholder="Nome completo"
+        className="input"
         value={fullname}
         onChange={(ev) => updateUser({ fullname: ev.target.value })}
       />
@@ -17,6 +18,7 @@ export const ProfileZ = () => {
       <input
         type="email"
         placeholder="E-mail"
+        className="input"
         value={email}
         onChange={(ev) => updateUser({ email: ev.target.value })}
       />

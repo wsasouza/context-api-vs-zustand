@@ -8,6 +8,7 @@ export const Profile = () => {
       <input
         type="text"
         placeholder="Nome completo"
+        className="input"
         value={context?.user.fullname}
         onChange={(ev) => context?.updateUser({ fullname: ev.target.value })}
       />
@@ -15,6 +16,7 @@ export const Profile = () => {
       <input
         type="email"
         placeholder="E-mail"
+        className="input"
         value={context?.user.email}
         onChange={(ev) => context?.updateUser({ email: ev.target.value })}
       />

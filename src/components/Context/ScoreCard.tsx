@@ -8,6 +8,7 @@ export const ScoreCard = () => {
       <input
         type="number"
         placeholder="Score"
+        className="input"
         value={context?.user.score}
         onChange={(ev) =>
           context?.updateUser({ score: parseInt(ev.target.value) })

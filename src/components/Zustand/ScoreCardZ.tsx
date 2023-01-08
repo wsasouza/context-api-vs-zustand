@@ -7,6 +7,7 @@ export const ScoreCardZ = () => {
   return (
     <div>
       <input
+        className="input"
         type="number"
         placeholder="Score"
         value={score}
